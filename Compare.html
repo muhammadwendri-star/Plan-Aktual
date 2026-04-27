@@ -40,7 +40,7 @@
     var viewerAktual = new Marzipano.Viewer(document.getElementById('viewerAktual'));
 
     // Scenes Plan
-    var scenesPlan = APP_DATA_PLAN.scenes.map(function(data) {
+    var scenesPlan = APP_DATA.scenes.map(function(data) {
       var source = Marzipano.ImageUrlSource.fromString(
         "Plan/tiles/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
         { cubeMapPreviewUrl: "Plan/tiles/" + data.id + "/preview.jpg" }
@@ -52,7 +52,7 @@
     });
 
     // Scenes Aktual
-    var scenesAktual = APP_DATA_ACTUAL.scenes.map(function(data) {
+    var scenesAktual = APP_DATA.scenes.map(function(data) {
       var source = Marzipano.ImageUrlSource.fromString(
         "Aktual/tiles/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
         { cubeMapPreviewUrl: "Aktual/tiles/" + data.id + "/preview.jpg" }
