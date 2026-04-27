@@ -4,42 +4,23 @@
   <meta charset="utf-8">
   <title>Plan vs Aktual</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-    }
-    iframe {
-      flex: 1;
-      border: none;
-    }
+    body { margin:0; font-family:sans-serif; display:flex; height:100vh; }
+    .panel { flex:1; display:flex; flex-direction:column; }
+    .panel h2 { margin:0; padding:10px; background:#e0e0e0; text-align:center; }
+    iframe { flex:1; border:none; }
   </style>
 </head>
 <body>
-  <!-- Kiri: Project Plan -->
-  <iframe src="Plan/index.html"></iframe>
-
-  <!-- Kanan: Project Aktual -->
-  <iframe src="Aktual/index.html"></iframe>
-
-  <div id="container">
   <!-- Panel Plan -->
-  <div style="flex:1; display:flex; flex-direction:column;">
-    <h2 style="margin:0; padding:10px; background:#e0e0e0; text-align:center;">
-      PLAN PROGRES = 100%
-    </h2>
-    <div id="viewerPlan" style="flex:1;"></div>
+  <div class="panel">
+    <h2>PLAN PROGRES = 100%</h2>
+    <iframe src="Plan/index.html"></iframe>
   </div>
 
   <!-- Panel Aktual -->
-  <div style="flex:1; display:flex; flex-direction:column;">
-    <h2 style="margin:0; padding:10px; background:#e0e0e0; text-align:center;">
-      AKTUAL PROGRES = 90%
-    </h2>
-    <div id="viewerAktual" style="flex:1;"></div>
+  <div class="panel">
+    <h2>AKTUAL PROGRES = 90%</h2>
+    <iframe src="Aktual/index.html"></iframe>
   </div>
-</div>
-
-
 </body>
 </html>
